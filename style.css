@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #f8f8f8;
+  height: 70px;
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+.logo img {
+  width: 70px;
+  height: 100%;
+  margin-left: 20px;
+  margin-top: 4px;
+}
+
+nav {
+  margin-right: 30px;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #080808;
+}
+
+.menu-icon {
+  display: none;
+  margin-right: 30px;
+}
+
+.welcome {
+  background-image: url("./images/penzion-u-vinohradu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 70px);
+}
+
+@media (max-width: 700px) {
+  header {
+    position: relative;
+  }
+
+  header nav {
+    position: absolute;
+    top: 70px;
+    background-color: #355e3b;
+    width: 100%;
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 23px;
+  }
+
+  nav li {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 700px) {
+  header nav {
+    display: block !important;
+  }
+}
